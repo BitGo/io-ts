@@ -1,6 +1,6 @@
 {
   "name": "@bitgo-forks/io-ts",
-  "version": "2.1.4",
+  "version": "0.0.0-semantic-release-managed",
   "description": "TypeScript compatible runtime type system for IO validation",
   "files": [
     "lib",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gcanti/io-ts.git"
+    "url": "https://github.com/BitGo/io-ts.git"
   },
   "author": "Giulio Canti <giulio.canti@gmail.com>",
   "license": "MIT",
