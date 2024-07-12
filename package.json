@@ -47,7 +47,7 @@
     "@types/node": "7.0.4",
     "benchmark": "2.1.4",
     "docs-ts": "^0.3.4",
-    "doctoc": "^1.4.0",
+    "doctoc": "^2.2.1",
     "dtslint": "github:gcanti/dtslint",
     "fp-ts": "^2.0.0",
     "import-path-rewrite": "github:gcanti/import-path-rewrite",
