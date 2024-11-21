@@ -25,7 +25,7 @@
     "mocha": "TS_NODE_CACHE=false mocha -r ts-node/register test/*.ts",
     "doctoc": "doctoc README.md",
     "docs": "docs-ts",
-    "import-path-rewrite": "import-path-rewrite"
+    "import-path-rewrite": "node scripts/import-path-rewrite.js"
   },
   "repository": {
     "type": "git",
@@ -50,7 +50,6 @@
     "doctoc": "^2.2.1",
     "dtslint": "github:gcanti/dtslint",
     "fp-ts": "^2.0.0",
-    "import-path-rewrite": "github:gcanti/import-path-rewrite",
     "jest": "^24.8.0",
     "mocha": "^10.6.0",
     "prettier": "^1.19.1",
