@@ -2,6 +2,8 @@
 name: Release
 
 permissions:
+  # Needed for npm Trusted Publishing
+  id-token: write
   # Needed for semantic-release
   contents: write
   pull-requests: write
@@ -22,6 +24,6 @@ jobs:
   release:
     uses: semantic-release-action/typescript/.github/workflows/release.yml@1d40c29e2d500f3bcceeb13f95d26a3a1b571f51 # v3.0.20
     secrets:
-      npm-token: ${{ secrets.NPM_TOKEN }}
+      npm-token: "n/a"
     with:
       disable-semantic-release-git: true
