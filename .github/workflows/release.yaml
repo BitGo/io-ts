@@ -21,6 +21,16 @@ on:
       - "[0-9]+.x"
 
 jobs:
+  verify-oidc:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Show OIDC token
+        run: |
+          echo "OIDC token exists: $ACTIONS_ID_TOKEN_REQUEST_TOKEN"
+
   release:
     uses: semantic-release-action/typescript/.github/workflows/release.yml@1d40c29e2d500f3bcceeb13f95d26a3a1b571f51 # v3.0.20
     secrets:
