@@ -1458,7 +1458,7 @@ export class TaggedUnionType<Tag, CS, A, O, I> {
     // tslint:disable-next-line: deprecation
     encode: TaggedUnionType<Tag, CS, A, O, I>['encode'],
     codecs: CS,
-    readonly tag: Tag
+    tag: Tag
   ) { ... }
   ...
 }
@@ -2151,7 +2151,7 @@ Added in v1.0.0
 **Signature**
 
 ```ts
-export const getDefaultContext /* istanbul ignore next */ = (decoder: Decoder<any, any>): Context => ...
+export const getDefaultContext = (decoder: Decoder<any, any>): Context => ...
 ```
 
 Added in v1.0.0
@@ -2161,7 +2161,7 @@ Added in v1.0.0
 **Signature**
 
 ```ts
-export const getValidationError /* istanbul ignore next */ = (value: unknown, context: Context): ValidationError => ...
+export const getValidationError = (value: unknown, context: Context): ValidationError => ...
 ```
 
 Added in v1.0.0

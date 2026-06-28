@@ -36,7 +36,6 @@
     "url": "https://github.com/gcanti/io-ts/issues"
   },
   "homepage": "https://github.com/gcanti/io-ts",
-  "dependencies": {},
   "peerDependencies": {
     "fp-ts": "^2.0.0"
   },

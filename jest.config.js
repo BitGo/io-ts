@@ -4,7 +4,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: { target: 'ES2015' } }]
   },
   testRegex: 'test',
   moduleFileExtensions: ['ts', 'js'],

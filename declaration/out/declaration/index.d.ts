@@ -21,7 +21,7 @@ export declare const R1: t.RefinementC<t.TypeC<{
         }>;
     }>;
 }>>;
-declare type R = {
+type R = {
     a: number;
     b: R | undefined | null;
 };

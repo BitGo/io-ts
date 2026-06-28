@@ -1563,6 +1563,7 @@ export class TaggedUnionType<
   O = A,
   I = unknown
 > extends UnionType<CS, A, O, I> {
+  readonly tag: Tag
   constructor(
     name: string,
     // tslint:disable-next-line: deprecation
@@ -1572,9 +1573,11 @@ export class TaggedUnionType<
     // tslint:disable-next-line: deprecation
     encode: TaggedUnionType<Tag, CS, A, O, I>['encode'],
     codecs: CS,
-    readonly tag: Tag
+    tag: Tag
   ) {
-    super(name, is, validate, encode, codecs) /* istanbul ignore next */ // <= workaround for https://github.com/Microsoft/TypeScript/issues/13455
+    super(name, is, validate, encode, codecs) /* istanbul ignore next */ // workaround for https://github.com/Microsoft/TypeScript/issues/13455
+    /* istanbul ignore next */
+    this.tag = tag
   }
 }
 
@@ -1759,7 +1762,8 @@ export type mixed = unknown
  * @since 1.0.0
  * @deprecated
  */
-export const getValidationError /* istanbul ignore next */ = (value: unknown, context: Context): ValidationError => ({
+/* istanbul ignore next */
+export const getValidationError = (value: unknown, context: Context): ValidationError => ({
   value,
   context
 })
@@ -1768,9 +1772,8 @@ export const getValidationError /* istanbul ignore next */ = (value: unknown, co
  * @since 1.0.0
  * @deprecated
  */
-export const getDefaultContext /* istanbul ignore next */ = (decoder: Decoder<any, any>): Context => [
-  { key: '', type: decoder }
-]
+/* istanbul ignore next */
+export const getDefaultContext = (decoder: Decoder<any, any>): Context => [{ key: '', type: decoder }]
 
 /**
  * @since 1.0.0
